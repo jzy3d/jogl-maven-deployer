@@ -1,6 +1,6 @@
 # jogl-maven-deployer
 
-Scripts to make a maven distribution out of JOGL 2.4
+Scripts to make a maven distribution out of JOGL 2.4 as there is [no official Maven deployment yet](http://forum.jogamp.org/Maven-repo-to-get-2-4-0-rc-td4041046.html).
 
 ## Install in your local maven repository
 
