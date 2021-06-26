@@ -2,6 +2,8 @@
 
 Scripts to make a maven distribution out of JOGL 2.4 as there is [no official Maven deployment yet](http://forum.jogamp.org/Maven-repo-to-get-2-4-0-rc-td4041046.html).
 
+It would be better to use the [jogamp-scripting project with slight modifications](https://github.com/jzy3d/jogamp-scripting/tree/2.4-to-jzy3d-maven-repo) but I still [have a problem with Wagon FTP to deploy it on my server](https://github.com/jzy3d/jogamp-scripting/issues/1) so I did the crappy procedure below.
+
 ## Install in your local maven repository
 
 ```bash
