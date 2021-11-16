@@ -1,13 +1,11 @@
 #!/bin/bash
 
-version="v2.4.0-rc-20210111"
+version="v2.4.0-rc4"
 folder="jar/"
 
 # Remarks
 # Repeated jars with android in the name
 # Skiped iOS + android
-
-mvn install:install-file -DgroupId=org.jogamp.gluegen -DartifactId=gluegen                             -Dversion=$version -Dfile=${folder}gluegen.jar                             -Dpackaging=jar
 
 mvn install:install-file -DgroupId=org.jogamp.gluegen -DartifactId=gluegen-rt                          -Dversion=$version -Dfile=${folder}gluegen-rt.jar                          -Dpackaging=jar
 

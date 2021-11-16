@@ -17,6 +17,10 @@ I wasn't able to have Wagon FTP deployer with the deploy-file command so I simpl
 
 ## Maven JOGL dependencies
 
+### Getting JOGL 2.4 RC 2021/01/11
+
+This one is a maven version of the latest known Jogamp release (Gluegen and JOGL only).
+
 ```xml
 <!-- JOGL -->
 <dependency>
@@ -121,6 +125,127 @@ I wasn't able to have Wagon FTP deployer with the deploy-file command so I simpl
   <groupId>org.jogamp.gluegen</groupId>
   <artifactId>gluegen-rt-natives-windows-i586 </artifactId>
   <version>v2.4.0-rc-20210111</version>
+</dependency>
+```
+
+### Getting JOGL 2.4 RC 4 for MacOS BigSur (2021/11/16)
+
+This one is a maven version of a patch allowing to run JOGL on MacOS BigSur. The only difference
+with previous release is that the two `macosx-universal` jars contain native libraries
+that are able to run on ARM processor, which was tried on Mac Mini M1.
+
+For more information on how the patch was done, see :
+* This [readme](https://github.com/jzy3d/jogl/blob/feature/macosx-arm64/HOW-TO-ADD-ARM64-TO-2.4.md)
+* This [discussion on Jogamp forum](https://forum.jogamp.org/JOGL-for-Mac-ARM-Silicon-td4040887.html)
+
+A zip version of this patch is [available here](https://download.jzy3d.org/jogl).
+
+[Newt canvas does not work on MacOS BigSur and behaves weirdly on other OS](https://github.com/jzy3d/jzy3d-api/issues/210),
+so the [Newt module of Jzy3D has been disabled](https://github.com/jzy3d/jzy3d-api/blob/0f1bc48b23031c75ff39854d895156cf567482e0/pom.xml#L64) for now.
+
+```xml
+<dependency>
+  <groupId>org.jogamp.jogl</groupId>
+  <artifactId>jogl-all</artifactId>
+  <version>v2.4.0-rc4</version>
+</dependency>
+
+<dependency>
+  <groupId>org.jogamp.jogl</groupId>
+  <artifactId>jogl-all-natives-linux-aarch64</artifactId>
+  <version>v2.4.0-rc4</version>
+</dependency>
+
+<dependency>
+  <groupId>org.jogamp.jogl</groupId>
+  <artifactId>jogl-all-natives-linux-amd64</artifactId>
+  <version>v2.4.0-rc4</version>
+</dependency>
+
+<dependency>
+  <groupId>org.jogamp.jogl</groupId>
+  <artifactId>jogl-all-natives-linux-armv6hf</artifactId>
+  <version>v2.4.0-rc4</version>
+</dependency>
+
+<dependency>
+  <groupId>org.jogamp.jogl</groupId>
+  <artifactId>jogl-all-natives-linux-i586</artifactId>
+  <version>v2.4.0-rc4</version>
+</dependency>
+
+<dependency>
+  <groupId>org.jogamp.jogl</groupId>
+  <artifactId>jogl-all-natives-macosx-universal</artifactId>
+  <version>v2.4.0-rc4</version>
+</dependency>
+
+<dependency>
+  <groupId>org.jogamp.jogl</groupId>
+  <artifactId>jogl-all-natives-windows-amd64</artifactId>
+  <version>v2.4.0-rc4</version>
+</dependency>
+
+<dependency>
+  <groupId>org.jogamp.jogl</groupId>
+  <artifactId>jogl-all-natives-windows-i586 </artifactId>
+  <version>v2.4.0-rc4</version>
+</dependency>
+
+<!-- GLUEGEN -->
+
+
+<dependency>
+  <groupId>org.jogamp.gluegen</groupId>
+  <artifactId>gluegen-rt</artifactId>
+  <version>v2.4.0-rc4</version>
+</dependency>
+<dependency>
+  <groupId>org.jogamp.gluegen</groupId>
+  <artifactId>gluegen-rt-natives-macosx-universal</artifactId>
+  <version>v2.4.0-rc4</version>
+</dependency>
+
+<dependency>
+  <groupId>org.jogamp.gluegen</groupId>
+  <artifactId>gluegen-rt-natives-linux-aarch64</artifactId>
+  <version>v2.4.0-rc4</version>
+</dependency>
+
+<dependency>
+  <groupId>org.jogamp.gluegen</groupId>
+  <artifactId>gluegen-rt-natives-linux-amd64</artifactId>
+  <version>v2.4.0-rc4</version>
+</dependency>
+
+<dependency>
+  <groupId>org.jogamp.gluegen</groupId>
+  <artifactId>gluegen-rt-natives-linux-armv6hf</artifactId>
+  <version>v2.4.0-rc4</version>
+</dependency>
+
+<dependency>
+  <groupId>org.jogamp.gluegen</groupId>
+  <artifactId>gluegen-rt-natives-linux-i586</artifactId>
+  <version>v2.4.0-rc4</version>
+</dependency>
+
+<dependency>
+  <groupId>org.jogamp.gluegen</groupId>
+  <artifactId>gluegen-rt-natives-macosx-universal</artifactId>
+  <version>v2.4.0-rc4</version>
+</dependency>
+
+<dependency>
+  <groupId>org.jogamp.gluegen</groupId>
+  <artifactId>gluegen-rt-natives-windows-amd64</artifactId>
+  <version>v2.4.0-rc4</version>
+</dependency>
+
+<dependency>
+  <groupId>org.jogamp.gluegen</groupId>
+  <artifactId>gluegen-rt-natives-windows-i586 </artifactId>
+  <version>v2.4.0-rc4</version>
 </dependency>
 ```
 
