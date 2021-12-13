@@ -258,12 +258,12 @@ To get the jar from Jzy3D maven server, simply add this repository reference to 
   <repository>
     <id>jzy3d-snapshots</id>
     <name>Jzy3d Snapshots</name>
-    <url>http://maven.jzy3d.org/snapshots/</url>
+    <url>https://maven.jzy3d.org/snapshots/</url>
   </repository>
   <repository>
     <id>jzy3d-releases</id>
     <name>Jzy3d Releases</name>
-    <url>http://maven.jzy3d.org/releases/</url>
+    <url>https://maven.jzy3d.org/releases/</url>
   </repository>
 </repositories>
 ```
